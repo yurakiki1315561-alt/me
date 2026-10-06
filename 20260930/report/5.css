@@ -1,0 +1,76 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  height: 20%;
+  background-color: yellow;
+  overflow: auto;
+}
+
+h1 {
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+}
+
+header p {
+  margin: 10px 0;
+}
+
+audio {
+  max-width: 100%;
+}
+
+nav {
+  float: left;
+  width: 20%;
+  height: 72%;
+  background-color: orange;
+  overflow: auto;
+}
+
+section {
+  float: left;
+  width: 80%;
+  height: 72%;
+  background-color: skyblue;
+  overflow: auto;
+}
+
+nav h2,
+article h2 {
+  margin: 16px 0;
+}
+
+nav ul {
+  padding-left: 35px;
+}
+
+article p {
+  margin: 0 0 16px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  padding: 2px;
+}
+
+footer {
+  clear: both;
+  width: 100%;
+  height: 8%;
+  background-color: violet;
+  overflow: auto;
+}
+
+footer p {
+  margin: 8px 0;
+}

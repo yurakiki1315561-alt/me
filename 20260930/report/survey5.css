@@ -1,0 +1,81 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  height: 20%;
+  background-color: yellow;
+  overflow: auto;
+}
+
+header h1 {
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+}
+
+header p {
+  margin: 10px 0;
+}
+
+section {
+  width: 100%;
+  height: 72%;
+  background-color: pink;
+  overflow: auto;
+}
+
+form {
+  padding: 10px;
+}
+
+article {
+  margin-bottom: 15px;
+}
+
+.question {
+  margin-right: 6px;
+}
+
+label {
+  display: inline-block;
+}
+
+select {
+  max-width: 100%;
+}
+
+.comment {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+textarea {
+  width: 280px;
+  max-width: 100%;
+  min-height: 140px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  height: 8%;
+  background-color: violet;
+  overflow: auto;
+}
+
+footer p {
+  margin: 8px 0;
+}
