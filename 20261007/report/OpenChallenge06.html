@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>별 문자 출력하기</title>
+  </head>
+  <body>
+    <h3>별 문자 출력하기</h3>
+    <hr />
+
+    <script>
+      function printStar(n) {
+        for (let i = 1; i <= n; i++) {
+          for (let j = 1; j <= i; j++) {
+            document.write("*");
+          }
+          document.write("<br>");
+        }
+      }
+
+      let input = prompt("정수를 입력하세요");
+      let n = Number(input);
+
+      if (isNaN(n) || n <= 0 || n % 1 != 0) {
+        document.write("입력 오류입니다.");
+      } else {
+        printStar(n);
+      }
+    </script>
+  </body>
+</html>
