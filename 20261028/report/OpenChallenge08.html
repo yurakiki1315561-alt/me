@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>갬블링 게임</title>
+
+    <style>
+      #game {
+        width: 150px;
+        height: 55px;
+        background-color: #f2d9ad;
+        border: 1px solid #b8a07b;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      #game span {
+        width: 45px;
+        text-align: center;
+        font-size: 40px;
+        font-style: italic;
+        cursor: pointer;
+      }
+
+      #result {
+        margin-top: 3px;
+        font-style: italic;
+        cursor: pointer;
+      }
+    </style>
+
+    <script>
+      let count = 0;
+
+      function play(obj) {
+        obj.innerHTML = Math.floor(Math.random() * 3);
+        count++;
+
+        if (count == 3) {
+          let spans = document.querySelectorAll("#game span");
+          let result = document.getElementById("result");
+
+          if (
+            spans[0].innerHTML == spans[1].innerHTML &&
+            spans[1].innerHTML == spans[2].innerHTML
+          ) {
+            result.innerHTML = "Success(click here to do again)";
+          } else {
+            result.innerHTML = "fail(click here to do again)";
+          }
+        }
+      }
+
+      function reset() {
+        let spans = document.querySelectorAll("#game span");
+
+        spans[0].innerHTML = "0";
+        spans[1].innerHTML = "0";
+        spans[2].innerHTML = "0";
+
+        document.getElementById("result").innerHTML = "";
+        count = 0;
+      }
+    </script>
+  </head>
+
+  <body>
+    <h3>갬블링 게임</h3>
+
+    <p>
+      각 숫자를 클릭하면 0에서 2사이의 난수로 바뀝니다. 모두 같은 수가 나오면
+      승리합니다.
+    </p>
+
+    <hr />
+
+    <div id="game">
+      <span onclick="play(this)">0</span>
+      <span onclick="play(this)">0</span>
+      <span onclick="play(this)">0</span>
+    </div>
+
+    <div id="result" onclick="reset()"></div>
+  </body>
+</html>
