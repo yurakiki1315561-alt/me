@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>마우스 클릭 연습</title>
+    <script>
+      function selectImage() {
+        var images = document.images;
+
+        for (var i = 0; i < images.length; i++) {
+          images[i].style.visibility = "hidden";
+        }
+
+        var index = Math.floor(Math.random() * images.length);
+        images[index].style.visibility = "visible";
+      }
+      window.onload = selectImage;
+    </script>
+  </head>
+  <body>
+    <h3>마우스 클릭 연습</h3>
+    <hr />
+    <table border="1">
+      <script>
+        for (var i = 0; i < 10; i++) {
+          document.write("<tr>");
+          for (var j = 0; j < 10; j++) {
+            document.write(
+              "<td width='40' height='40' onclick='selectImage()'>",
+            );
+            document.write(
+              "<img src='../image/donkey.png' width='40' height='40' style='visibility:hidden'>",
+            );
+            document.write("</td>");
+          }
+          document.write("</tr>");
+        }
+      </script>
+    </table>
+  </body>
+</html>
